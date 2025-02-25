@@ -5,6 +5,12 @@ const prisma = new PrismaClient({
   log: ["query", "info", "warn", "error"],
 });
 
+export async function getOneTask(id: string) {
+  return await prisma.task.findUnique({
+    where: { id },
+  });
+}
+
 export async function getAllTask() {
   return await prisma.task.findMany();
 }

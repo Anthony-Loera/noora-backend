@@ -1,8 +1,9 @@
 {
   "name": "nooro-backend",
   "version": "1.0.0",
-  "main": "index.ts",
+  "main": "src/index.ts",
   "scripts": {
+    "start": "nodemon",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
@@ -15,6 +16,7 @@
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
     "mysql2": "^3.12.0",
+    "nodemon": "^3.1.9",
     "sequelize": "^6.37.5",
     "ts-node": "^10.9.2"
   },

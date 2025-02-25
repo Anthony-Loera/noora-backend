@@ -3,8 +3,19 @@ import {
   createOneTask,
   deletedTask,
   getAllTask,
+  getOneTask,
   updatedTask,
 } from "./services";
+
+export async function getTask(req: Request, res: Response) {
+  try {
+    const { id } = req.params;
+    const task = await getOneTask(id);
+    res.status(200).json(task);
+  } catch (error) {
+    res.status(500).json({ error: "Failed to get task" });
+  }
+}
 
 export async function tasks(req: Request, res: Response) {
   try {
